@@ -1,0 +1,1 @@
+Usuários de teste: admin/admin123 e maria/maria123 (senhas com hash no banco).
