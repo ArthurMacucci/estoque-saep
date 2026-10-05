@@ -1,0 +1,54 @@
+:root{--papel:#f4f6f7;--card:#fff;--tinta:#1b2a33;--suave:#5d6d77;--linha:#dbe2e6;
+--acento:#0f6b6b;--acento-esc:#0b5252;--alerta:#b86e00;--alerta-bg:#fff3dc;--erro:#b3261e;--erro-bg:#fde8e6;--ok:#1f6b3a;--ok-bg:#e4f4e9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font:16px/1.5 "Segoe UI",system-ui,sans-serif}
+a{color:var(--acento)}a:hover{color:var(--acento-esc)}
+:focus-visible{outline:3px solid #7fc4c4;outline-offset:2px}
+.topo{display:flex;align-items:center;gap:2rem;padding:.75rem 1.5rem;background:var(--tinta);color:#fff;flex-wrap:wrap}
+.topo a{color:#fff;text-decoration:none}
+.marca{font-weight:700;font-size:1.2rem;letter-spacing:.02em}
+.topo nav{display:flex;gap:1.25rem;flex:1}
+.topo nav a{padding:.25rem 0;border-bottom:2px solid transparent;opacity:.8}
+.topo nav a[aria-current]{border-color:#5fc4c4;opacity:1}
+.usuario{font-size:.9rem}.usuario .link{color:#fff;margin-left:.75rem}
+main{max-width:1000px;margin:0 auto;padding:1.5rem}
+h1{font-size:1.7rem;margin:.2rem 0 1rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}
+.cabeca{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--acento);color:#fff;border:0;border-radius:6px;padding:.55rem 1.1rem;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--acento-esc);color:#fff}
+.btn.sec{background:#fff;color:var(--acento);border:1px solid var(--acento)}.btn.sec:hover{background:#e8f3f3;color:var(--acento-esc)}
+.acoes{display:flex;gap:1rem;align-items:center;margin:1rem 0}
+.aviso{padding:.7rem 1rem;border-radius:6px;margin-bottom:1rem;border-left:4px solid}
+.aviso.erro{background:var(--erro-bg);border-color:var(--erro);color:#7a1610}
+.aviso.ok{background:var(--ok-bg);border-color:var(--ok);color:#164d29}
+.aviso.alerta{background:var(--alerta-bg);border-color:var(--alerta);color:#6b4000}
+.resumo{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+.resumo div{background:var(--card);border:1px solid var(--linha);border-radius:8px;padding:1rem;color:var(--suave)}
+.resumo b{display:block;font-size:1.6rem;color:var(--tinta);line-height:1.2}
+.resumo .critico{border-color:var(--alerta);background:var(--alerta-bg)}.resumo .critico b{color:var(--alerta)}
+.tabela{background:var(--card);border:1px solid var(--linha);border-radius:8px;overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{padding:.65rem .9rem;text-align:left;border-bottom:1px solid var(--linha);vertical-align:top}
+th{font-size:.85rem;color:var(--suave);font-weight:600;background:#eef2f4}
+tr:last-child td{border-bottom:0}
+.n{text-align:right;white-space:nowrap}
+td small{display:block;color:var(--suave);font-size:.82rem}
+.baixo{color:var(--alerta);font-weight:700}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;padding:.05rem .5rem;border-radius:99px}
+.tag.entrada{background:var(--ok-bg);color:var(--ok)}.tag.saida{background:#e6eef5;color:#1f4f7a}.tag.alerta{background:var(--alerta-bg);color:var(--alerta)}
+.linha-acoes{white-space:nowrap}.linha-acoes>*{display:inline-block;margin-right:.7rem}
+.link{background:none;border:0;padding:0;font:inherit;color:var(--acento);cursor:pointer;text-decoration:underline}
+.link.perigo{color:var(--erro)}
+.vazio{color:var(--suave);padding:.5rem 0}
+.busca{display:flex;gap:.6rem;align-items:center;margin:1rem 0;flex-wrap:wrap}.busca input{flex:1;min-width:220px}
+input,select,textarea{width:100%;font:inherit;padding:.55rem .7rem;border:1px solid #b9c5cb;border-radius:6px;background:#fff;color:var(--tinta)}
+label{display:block;font-weight:600;margin-bottom:1rem}label input,label select,label textarea{margin-top:.3rem;font-weight:400}
+.form{background:var(--card);border:1px solid var(--linha);border-radius:8px;padding:1.5rem;max-width:560px}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+fieldset{border:0;padding:0;margin:0 0 1rem}legend{font-weight:600;margin-bottom:.3rem}
+.radio{display:inline-block;font-weight:400;margin-right:1.5rem;margin-bottom:0}.radio input{width:auto;margin-right:.35rem}
+.dica{color:var(--suave);font-size:.92rem}
+.login{max-width:360px;margin:12vh auto 0;background:var(--card);border:1px solid var(--linha);border-radius:10px;padding:2rem}
+.login h1{margin-bottom:.2rem}.sub{color:var(--suave);margin:0 0 1.5rem}.login .btn{width:100%}
+.rodape{margin-top:2.5rem;font-size:.85rem;color:var(--suave)}
+@media(max-width:600px){.duas{grid-template-columns:1fr}.topo{gap:.8rem}}
